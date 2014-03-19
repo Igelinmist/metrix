@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Plant:
+  = @assembly.plant_id
+p
+  strong Name:
+  = @assembly.name
+p
+  strong Params:
+  = @assembly.params
+
+= link_to 'Edit', edit_assembly_path(@assembly)
+'|
+= link_to 'Back', assemblies_path

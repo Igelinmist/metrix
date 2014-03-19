@@ -1,0 +1,23 @@
+h1 Listing assemblies
+
+table
+  tr
+    th Plant
+    th Name
+    th Params
+    th
+    th
+    th
+
+  - @assemblies.each do |assembly|
+    tr
+      td = assembly.plant_id
+      td = assembly.name
+      td = assembly.params
+      td = link_to 'Show', assembly
+      td = link_to 'Edit', edit_assembly_path(assembly)
+      td = link_to 'Destroy', assembly, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Assembly', new_assembly_path
