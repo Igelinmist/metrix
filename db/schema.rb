@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20140321055318) do
   end
 
   create_table "meters", force: true do |t|
+    t.string  "type"
     t.string  "accuracy_class"
     t.string  "serial_number"
     t.date    "primary_verification_date"
