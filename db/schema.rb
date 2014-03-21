@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140319065354) do
+ActiveRecord::Schema.define(version: 20140321055318) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,13 @@ ActiveRecord::Schema.define(version: 20140319065354) do
     t.integer "plant_id"
     t.string  "name"
     t.text    "params"
+  end
+
+  create_table "meters", force: true do |t|
+    t.string  "accuracy_class"
+    t.string  "serial_number"
+    t.date    "primary_verification_date"
+    t.integer "assembly_id"
   end
 
   create_table "scans", force: true do |t|
@@ -31,15 +38,13 @@ ActiveRecord::Schema.define(version: 20140319065354) do
     t.datetime "updated_at"
   end
 
-  create_table "services", force: true do |t|
+  create_table "service_jobs", force: true do |t|
     t.string   "doc_num"
     t.date     "serv_date"
-    t.boolean  "is_primary",  default: false
     t.date     "valid_to"
     t.string   "serv_firm"
     t.text     "descr"
-    t.integer  "device_id"
-    t.string   "device_type"
+    t.integer  "meter_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
