@@ -17,8 +17,8 @@
     </data-source>
     <data-source source="LOCAL" name="Rails pover: test" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="b14c8659-f3a3-4120-b756-5e1a66e0bc89">
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/pover_test</jdbc-url>
-      <user-name>puser</user-name>
+      <jdbc-url>jdbc:postgresql:pover_test</jdbc-url>
+      <user-name>pover</user-name>
       <user-password>df9bdf98df99df9e</user-password>
       <libraries>
         <library>

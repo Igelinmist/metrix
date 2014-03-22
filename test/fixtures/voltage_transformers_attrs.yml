@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  transform_koef: MyString
+  s_nome: 1.5
+  s_fact: 1.5
+  voltage_loses: 1.5
+  switchboards: MyString
+
+two:
+  transform_koef: MyString
+  s_nome: 1.5
+  s_fact: 1.5
+  voltage_loses: 1.5
+  switchboards: MyString
