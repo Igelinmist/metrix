@@ -1,0 +1,27 @@
+p#notice = notice
+
+p
+  strong Reestr nmbr:
+  = @grsi_item.reestr_nmbr
+p
+  strong Reestr name:
+  = @grsi_item.reestr_name
+p
+  strong Reestr type:
+  = @grsi_item.reestr_type
+p
+  strong Factory:
+  = @grsi_item.factory
+p
+  strong Country:
+  = @grsi_item.country
+p
+  strong Valid until:
+  = @grsi_item.valid_until
+p
+  strong Mpi year:
+  = @grsi_item.mpi_year
+
+= link_to 'Edit', edit_grsi_item_path(@grsi_item)
+'|
+= link_to 'Back', grsi_items_path

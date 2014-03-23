@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140319065354) do
+ActiveRecord::Schema.define(version: 20140323071857) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,36 @@ ActiveRecord::Schema.define(version: 20140319065354) do
     t.integer "plant_id"
     t.string  "name"
     t.text    "params"
+  end
+
+  create_table "elcounter_attrs", force: true do |t|
+    t.string   "connection_schema"
+    t.integer  "year_of_production"
+    t.string   "gost"
+    t.integer  "elcounter_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "grsi_items", force: true do |t|
+    t.string   "reestr_nmbr"
+    t.string   "reestr_name"
+    t.string   "reestr_type"
+    t.string   "factory"
+    t.string   "country"
+    t.date     "valid_until"
+    t.integer  "mpi_year"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "meters", force: true do |t|
+    t.string  "type"
+    t.string  "accuracy_class"
+    t.string  "serial_number"
+    t.date    "primary_verification_date"
+    t.integer "assembly_id"
+    t.integer "grsi_item_id"
   end
 
   create_table "scans", force: true do |t|
@@ -38,6 +68,17 @@ ActiveRecord::Schema.define(version: 20140319065354) do
     t.string   "serv_firm"
     t.text     "descr"
     t.integer  "meter_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "voltage_transformer_attrs", force: true do |t|
+    t.string   "transform_koef"
+    t.float    "s_nome"
+    t.float    "s_fact"
+    t.float    "voltage_loses"
+    t.string   "switchboards"
+    t.integer  "voltage_transformer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

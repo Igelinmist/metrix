@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reestr_nmbr: MyString
+  reestr_name: MyString
+  reestr_type: MyString
+  factory: MyString
+  country: MyString
+  valid_until: 2014-03-23
+  mpi_year: 1
+
+two:
+  reestr_nmbr: MyString
+  reestr_name: MyString
+  reestr_type: MyString
+  factory: MyString
+  country: MyString
+  valid_until: 2014-03-23
+  mpi_year: 1

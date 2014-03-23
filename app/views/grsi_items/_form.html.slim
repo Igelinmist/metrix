@@ -1,0 +1,30 @@
+= form_for @grsi_item do |f|
+  - if @grsi_item.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@grsi_item.errors.count, "error")} prohibited this grsi_item from being saved:"
+      ul
+        - @grsi_item.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :reestr_nmbr
+    = f.text_field :reestr_nmbr
+  .field
+    = f.label :reestr_name
+    = f.text_field :reestr_name
+  .field
+    = f.label :reestr_type
+    = f.text_field :reestr_type
+  .field
+    = f.label :factory
+    = f.text_field :factory
+  .field
+    = f.label :country
+    = f.text_field :country
+  .field
+    = f.label :valid_until
+    = f.date_select :valid_until
+  .field
+    = f.label :mpi_year
+    = f.number_field :mpi_year
+  .actions = f.submit 'Save'

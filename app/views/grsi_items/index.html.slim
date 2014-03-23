@@ -1,0 +1,31 @@
+h1 Listing grsi_items
+
+table
+  tr
+    th Reestr nmbr
+    th Reestr name
+    th Reestr type
+    th Factory
+    th Country
+    th Valid until
+    th Mpi year
+    th
+    th
+    th
+
+  - @grsi_items.each do |grsi_item|
+    tr
+      td = grsi_item.reestr_nmbr
+      td = grsi_item.reestr_name
+      td = grsi_item.reestr_type
+      td = grsi_item.factory
+      td = grsi_item.country
+      td = grsi_item.valid_until
+      td = grsi_item.mpi_year
+      td = link_to 'Show', grsi_item
+      td = link_to 'Edit', edit_grsi_item_path(grsi_item)
+      td = link_to 'Destroy', grsi_item, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Grsi item', new_grsi_item_path

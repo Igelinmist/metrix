@@ -1,0 +1,22 @@
+h1 Meters#index
+
+table
+  th
+    td Класс точности
+    td Заводской номер
+    td Первичная поверка
+    td
+  - @meters.each  do |meter|
+    tr
+      td =meter.accuracy_class
+      td =meter.serial_number
+      td =meter.primary_verification_date
+      td
+        = link_to 'Show', meter
+        = link_to 'Edit', edit_meter_path
+        = link_to 'Destroy', meter, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Meter', new_meter_path
+

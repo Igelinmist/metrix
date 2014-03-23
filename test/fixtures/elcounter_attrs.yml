@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  connection_schema: MyString
+  year_of_production: 1
+  gost: MyString
+
+two:
+  connection_schema: MyString
+  year_of_production: 1
+  gost: MyString

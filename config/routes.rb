@@ -1,4 +1,10 @@
 Pover::Application.routes.draw do
+
+  resources :grsi_items
+
+  resources :meters
+  resources :voltage_transformers, controller: 'meters', type: 'VoltageTransformer'
+
   resources :assemblies
 
   # The priority is based upon order of creation: first created -> highest priority.

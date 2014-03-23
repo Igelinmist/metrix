@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class VoltageTransformersAttrTest < ActiveSupport::TestCase
+class VoltageTransformerAttrTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

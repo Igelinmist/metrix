@@ -1,3 +1,3 @@
 class VoltageTransformer < Meter
-  has_one :voltage_transformers_attr, dependent: :destroy
+  has_one :voltage_transformer_attr, dependent: :destroy
 end
