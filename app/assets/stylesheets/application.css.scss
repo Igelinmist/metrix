@@ -8,6 +8,55 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require jquery.ui.datepicker
  *= require_self
  *= require_tree .
  */
+#columns {
+  #menu_panel {
+    width: 15em;
+    background: #4c7cdf;
+    float: right;
+    height: 900px;
+    padding: 1em;
+    a {
+      color: #f4ff93;
+    }
+    #banner {
+      text-align: center;
+      color: #f4ff93;
+      font-family: "Comic Sans MS";
+      font-size: x-small;
+    }
+  }
+  #main_panel {
+    background: #f8f5d0;
+  }
+  .left {
+    float: left;
+    width: 600px;
+    background: #aeddff;
+  }
+  .right {
+    float: right;
+    width: 300px;
+    background: #ffecbe;
+  }
+  .tree {
+    float: left;
+    width: 80%;
+    img {
+      float: right;
+    }
+    .list_line_even {
+      background: #e7ffff;
+    }
+    .list_line_odd {
+      background: #ffeff1;
+    }
+  }
+}
+.actions {
+  font-size: x-small;
+
+}

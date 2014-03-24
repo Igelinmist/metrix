@@ -1,9 +1,25 @@
 html
   head
-    title Pover
-    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
-    = javascript_include_tag "application", "data-turbolinks-track" => true
+    title Poverь
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
     = csrf_meta_tags
-  body
-    = yield
+  body class=controller.controller_name
+    #columns
+      #menu_panel
+        #banner
+          =image_tag 'logo.png'
+          br
+          |Process Control Systems
+          br
+          |Measurement Devices Control
+          br
+
+        |Навигация:
+        br
+        =link_to 'Каталог ГРСИ', grsi_items_url
+        br
+        =link_to 'Технологические узлы', assemblies_url
+      #main_content
+        = yield
 

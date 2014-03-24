@@ -1,23 +1,14 @@
-h1 Listing assemblies
-
-table
-  tr
-    th Plant
-    th Name
-    th Params
-    th
-    th
-    th
-
-  - @assemblies.each do |assembly|
-    tr
-      td = assembly.plant_id
-      td = assembly.name
-      td = assembly.params
-      td = link_to 'Show', assembly
-      td = link_to 'Edit', edit_assembly_path(assembly)
-      td = link_to 'Destroy', assembly, data: {:confirm => 'Are you sure?'}, :method => :delete
+h1 Перечень оборудования
+br
+= link_to 'Добавить', new_assembly_path
+br
+- unit_tree.each do |el|
+  - if el[0].name != '-'
+    .tree
+      div class=cycle('list_line_even','list_line_odd') style="margin-left: #{(el[1]*25).to_s}px;"
+        = el[0].name
+        = link_to image_tag("okular.png",:size => "16x16", :alt => "Смотреть",:title => "Смотреть"),el[0]
+        = link_to image_tag("edit_wb.png",:size => "16x16", :alt => "Править", :title => "Править"),edit_assembly_path(el[0])
+        = link_to image_tag("delete_wb.png",:size => "16x16", :alt => "Удалить", :title =>"Удалить"), el[0], data: {:confirm => 'Уверены?'}, :method => :delete
 
 br
-
-= link_to 'New Assembly', new_assembly_path

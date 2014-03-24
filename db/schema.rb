@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140323071857) do
+ActiveRecord::Schema.define(version: 20140324071108) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 20140323071857) do
 
   create_table "voltage_transformer_attrs", force: true do |t|
     t.string   "transform_koef"
-    t.float    "s_nome"
+    t.float    "s_nom"
     t.float    "s_fact"
     t.float    "voltage_loses"
     t.string   "switchboards"
