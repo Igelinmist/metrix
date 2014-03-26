@@ -17,7 +17,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: pover_development
+  database: metrix_development
   pool: 5
   username: puser
   password: 1234
@@ -48,7 +48,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: pover_test
+  database: metrix_test
   pool: 5
   username: puser
   password: 1234

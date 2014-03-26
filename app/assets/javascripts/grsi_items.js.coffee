@@ -2,4 +2,5 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 jQuery ->
-  $('#grsi_item_valid_until').datepicker().formatDate( "yy-mm-dd")
+  $('#grsi_item_valid_until').datepicker dateFormat: 'dd.mm.yy'
+

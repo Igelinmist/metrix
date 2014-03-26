@@ -1,22 +1,22 @@
-h1 Meters#index
+h1 Перечень средств измерений
 
 table
-  th
-    td Класс точности
-    td Заводской номер
-    td Первичная поверка
-    td
+  tr
+    th Класс точности
+    th Заводской номер
+    th Первичная поверка
+    th
   - @meters.each  do |meter|
     tr
       td =meter.accuracy_class
       td =meter.serial_number
       td =meter.primary_verification_date
       td
-        = link_to 'Show', meter
-        = link_to 'Edit', edit_meter_path
-        = link_to 'Destroy', meter, data: {:confirm => 'Are you sure?'}, :method => :delete
+        = link_to 'Подробно', meter
+        = link_to 'Править', edit_meter_path
+        = link_to 'Удалить', meter, data: {:confirm => 'Уверены?'}, :method => :delete
 
 br
 
-= link_to 'New Meter', new_meter_path
+= link_to 'Новый прибор', new_meter_path
 

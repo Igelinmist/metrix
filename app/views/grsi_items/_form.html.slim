@@ -23,7 +23,7 @@
     = f.text_field :country
   .field
     = f.label :valid_until
-    = f.text_field :valid_until
+    = f.text_field :valid_until, value: (f.object.valid_until.strftime('%d.%m.%Y') if f.object.valid_until)
   .field
     = f.label :mpi_year
     = f.number_field :mpi_year

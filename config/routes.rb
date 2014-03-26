@@ -1,4 +1,4 @@
-Pover::Application.routes.draw do
+Metrix::Application.routes.draw do
 
   resources :grsi_items
 

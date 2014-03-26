@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Pover::Application.load_tasks
+Metrix::Application.load_tasks

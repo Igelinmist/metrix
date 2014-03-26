@@ -1,3 +1,28 @@
 // Place all the styles related to the Assemblies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.assemblies {
+  .left {
+    float: left;
+    width: 600px;
+    background: #aeddff;
+  }
+  .right {
+    float: right;
+    width: 300px;
+    background: #ffecbe;
+  }
+  .tree {
+    float: left;
+    width: 80%;
+    img {
+      float: right;
+    }
+    .list_line_even {
+      background: #e7ffff;
+    }
+    .list_line_odd {
+      background: #ffeff1;
+    }
+  }
+}

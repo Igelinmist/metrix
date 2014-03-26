@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Pover::Application.config.secret_key_base = 'e6a688184d4f265abb55529d072eccd01dfe7b34b4ea37e4cf4ac23759fd871cfa81a5f9d6ae1c2c58e36da4a64ac5c443ef1d68c75cd790b8db1d27ae7ca28a'
+Metrix::Application.config.secret_key_base = 'e6a688184d4f265abb55529d072eccd01dfe7b34b4ea37e4cf4ac23759fd871cfa81a5f9d6ae1c2c58e36da4a64ac5c443ef1d68c75cd790b8db1d27ae7ca28a'

@@ -29,32 +29,7 @@
       font-size: x-small;
     }
   }
-  #main_panel {
-    background: #f8f5d0;
-  }
-  .left {
-    float: left;
-    width: 600px;
-    background: #aeddff;
-  }
-  .right {
-    float: right;
-    width: 300px;
-    background: #ffecbe;
-  }
-  .tree {
-    float: left;
-    width: 80%;
-    img {
-      float: right;
-    }
-    .list_line_even {
-      background: #e7ffff;
-    }
-    .list_line_odd {
-      background: #ffeff1;
-    }
-  }
+
 }
 .actions {
   font-size: x-small;
