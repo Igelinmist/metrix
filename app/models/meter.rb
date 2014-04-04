@@ -8,4 +8,5 @@ class Meter < ActiveRecord::Base
     # Действие свидетельства о поверке до окончания периода
     true
   end
+
 end

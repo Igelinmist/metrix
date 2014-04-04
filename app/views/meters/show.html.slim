@@ -1,0 +1,16 @@
+p#notice = notice
+h1 Характеристики средства измерения
+br
+p
+  strong Технологический узел:
+  = @meter.assembly.full_name if @meter.assembly
+p
+  strong Средство измерения:
+  = (@meter.grsi_item.reestr_name+"\u00B7"+@meter.grsi_item.reestr_nmbr+"\u00B7"+@meter.grsi_item.reestr_type) if @meter.grsi_item
+p
+  strong Класс точности:
+  = @meter.accuracy_class
+p
+  strong Серийный номер:
+  = @meter.serial_number
+=render 'vt_prm_show'

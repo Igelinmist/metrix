@@ -1,0 +1,19 @@
+p
+  strong Коэффициент трансформации:
+  = @meter.voltage_transformer_attr.transform_koef
+p
+  strong Номинальная мощность (ВА):
+  = @meter.voltage_transformer_attr.s_nom
+p
+  strong Фактическая мощность (ВА):
+  = @meter.voltage_transformer_attr.s_fact
+p
+  strong Коммутационные аппараты:
+  = @meter.voltage_transformer_attr.switchboards
+p
+  strong Потери напряжения (%):
+  = @meter.voltage_transformer_attr.voltage_loses
+
+= link_to 'Править',edit_voltage_transformer_path(@meter)
+'|
+= link_to 'Назад', voltage_transformers_path

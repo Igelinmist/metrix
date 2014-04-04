@@ -2,21 +2,27 @@ h1 Перечень средств измерений
 
 table
   tr
+    th Технологический узел
+    th Госреестр
     th Класс точности
     th Заводской номер
     th Первичная поверка
     th
   - @meters.each  do |meter|
     tr
+      td =meter.assembly.full_name if meter.assembly
+      td =(meter.grsi_item.reestr_name+"\u00B7"+meter.grsi_item.reestr_nmbr+"\u00B7"+meter.grsi_item.reestr_type) if meter.grsi_item
       td =meter.accuracy_class
       td =meter.serial_number
       td =meter.primary_verification_date
       td
-        = link_to 'Подробно', meter
-        = link_to 'Править', edit_meter_path
-        = link_to 'Удалить', meter, data: {:confirm => 'Уверены?'}, :method => :delete
+        =link_to 'Смотреть',meter
+        '|
+        =link_to 'Править',id: meter.id,controller: :meters, action: :edit, type: meter.type
+        '|
+        =link_to 'Удалить', meter, data: {:confirm => 'Are you sure?'}, :method => :delete
 
 br
 
-= link_to 'Новый прибор', new_meter_path
+=link_to 'Добавить',controller: :meters, action: :new
 

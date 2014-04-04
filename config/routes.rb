@@ -1,9 +1,13 @@
 Metrix::Application.routes.draw do
 
+  get "home/welcome"
+  get "home/contacts"
+  get "home/about"
   resources :grsi_items
 
   resources :meters
   resources :voltage_transformers, controller: 'meters', type: 'VoltageTransformer'
+  resources :elcounters, controller: 'meters', type: 'Elcounter'
 
   resources :assemblies
 
@@ -11,7 +15,7 @@ Metrix::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'home#welcome'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

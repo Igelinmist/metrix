@@ -1,2 +1,7 @@
-h1 Meters#edit
-p Find me in app/views/meters/edit.html.slim
+h1 Editing meter
+
+== render 'form'
+
+= link_to 'Show', @meter
+'|
+= link_to 'Back', controller: :meters, action: :index

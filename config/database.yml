@@ -58,7 +58,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: pover_production
+  database: metrix_production
   pool: 5
-  username: pover
+  username: metrix
   password:
