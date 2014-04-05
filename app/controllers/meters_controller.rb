@@ -17,8 +17,7 @@ class MetersController < ApplicationController
 
   def create
     @meter = @meter_class.new(meter_params)
-
-    @meter.save ? redirect_to(voltage_transformer_path(@meter)) : render(action: :new)
+    @meter.save ? redirect_to(@meter, notice: 'Meter was successfully created.') : render(action: :new)
   end
 
   def edit

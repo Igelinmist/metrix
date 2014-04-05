@@ -14,18 +14,12 @@
   .field
     =f.label 'Дата первичной поверки:'
     =f.text_field :primary_verification_date
-  =f.fields_for :voltage_transformer_attr do |ext_f|
-    .field
-        =ext_f.label 'Коэффициент трансформации'
-        =ext_f.text_field :transform_koef
-    .field
-      =ext_f.label 'Нагрузка номинальная (ВА)'
-      =ext_f.text_field :s_nom
-    .field
-        =ext_f.label 'Нагрузка фактическая (ВА)'
-        =ext_f.text_field :s_fact
-    .field
-        =ext_f.label 'Потери напряжения (%)'
-        =ext_f.text_field :voltage_loses
+  -case @meter.class.name
+  -when 'VoltageTransformer'
+    =render partial: 'vt_prm_form', locals: {frm: f}
+  -when 'Elcounter'
+      =render partial: 'elc_prm_form', locals: {frm: f}
+  -else
+    =nil
   .actions = f.submit 'Сохранить'
 

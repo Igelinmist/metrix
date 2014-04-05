@@ -1,0 +1,13 @@
+p
+  strong Схема соединений:
+  = @meter.elcounter_attr.connection_schema
+p
+  strong ГОСТ(ы) по учету энергии:
+  = @meter.elcounter_attr.gost
+p
+  strong Год производства:
+  = @meter.elcounter_attr.year_of_production
+
+= link_to 'Править',edit_elcounter_path(@meter)
+'|
+= link_to 'Назад', meters_path
