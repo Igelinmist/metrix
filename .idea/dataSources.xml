@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" hash="837783271">
-    <data-source source="LOCAL" name="Rails metrix: production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="22074aec-6738-4f7d-8aed-b6c39fc6b608">
+    <data-source source="LOCAL" name="Rails metrix: production" uuid="22074aec-6738-4f7d-8aed-b6c39fc6b608">
+      <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql:metrix_production</jdbc-url>
       <user-name>metrix</user-name>
@@ -14,8 +15,8 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="Rails metrix: development" product="PostgreSQL" version="9.2.4" jdbc-version="3.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.2 JDBC3g (build 1002)" uuid="1cfad15f-dfcc-4d8b-b9c6-d6951b0a1e7f">
-      <identifier-quote-string>&quot;</identifier-quote-string>
+    <data-source source="LOCAL" name="Rails metrix: development" uuid="1cfad15f-dfcc-4d8b-b9c6-d6951b0a1e7f">
+      <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://127.0.0.1:5432/metrix_development</jdbc-url>
       <user-name>puser</user-name>
@@ -29,8 +30,8 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="Rails metrix: test" product="PostgreSQL" version="9.2.4" jdbc-version="3.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.2 JDBC3g (build 1002)" uuid="f125e421-1614-4ff5-9629-ff6d1bbaadb8">
-      <identifier-quote-string>&quot;</identifier-quote-string>
+    <data-source source="LOCAL" name="Rails metrix: test" uuid="f125e421-1614-4ff5-9629-ff6d1bbaadb8">
+      <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://127.0.0.1:5432/metrix_test</jdbc-url>
       <user-name>puser</user-name>
