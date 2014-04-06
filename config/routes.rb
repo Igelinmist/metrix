@@ -9,6 +9,8 @@ Metrix::Application.routes.draw do
   resources :voltage_transformers, controller: 'meters', type: 'VoltageTransformer'
   resources :elcounters, controller: 'meters', type: 'Elcounter'
 
+  get 'meters/new/:meter_type', to: redirect { |params, req| "/#{params[:meter_type]}/new"}
+
   resources :assemblies
 
   # The priority is based upon order of creation: first created -> highest priority.
