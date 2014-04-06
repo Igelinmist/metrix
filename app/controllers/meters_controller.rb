@@ -47,6 +47,7 @@ private
 
   def setup_class
     resource = request.path.split('/')[1]
+    resource = params[:type] unless params[:type].nil?
     @meter_class = resource.singularize.classify.constantize
   end
 

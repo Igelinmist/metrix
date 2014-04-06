@@ -1,4 +1,4 @@
 .meters_choice
   =form_tag 'meters/new', method: :get
-    =select_tag(:type, options_for_select([['Трансформатор напряжения','VoltageTransformer'],['Электросчетчик','Elcounter']]))
+    =select_tag(:type, options_for_select([['Трансформатор напряжения','voltage_transformers'],['Электросчетчик','elcounters']]))
     =submit_tag 'Принять'
