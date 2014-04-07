@@ -6,6 +6,7 @@ Metrix::Application.routes.draw do
   resources :grsi_items
 
   resources :meters
+  post "meters/upload" => 'meters#upload'
   resources :voltage_transformers, controller: 'meters', type: 'VoltageTransformer'
   resources :elcounters, controller: 'meters', type: 'Elcounter'
 

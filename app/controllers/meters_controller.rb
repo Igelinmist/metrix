@@ -43,11 +43,18 @@ class MetersController < ApplicationController
     end
   end
 
+  def upload
+    uploaded_io = params[:picture]
+    File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
+      file.write(uploaded_io.read)
+    end
+    redirect_to controller: :meters, action: :new
+  end
+
 private
 
   def setup_class
-    resource = request.path.split('/')[1]
-    resource = params[:type] unless params[:type].nil?
+    params[:type].nil? ? resource = request.path.split('/')[1] : resource = params[:type]
     @meter_class = resource.singularize.classify.constantize
   end
 
