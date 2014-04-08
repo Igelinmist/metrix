@@ -5,12 +5,18 @@ Metrix::Application.routes.draw do
   get "home/about"
   resources :grsi_items
 
-  resources :meters
+  resources :meters do
+    resources :scans
+  end
 
   post "meters/upload" => 'meters#upload'
 
-  resources :voltage_transformers, controller: 'meters', type: 'VoltageTransformer'
-  resources :elcounters, controller: 'meters', type: 'Elcounter'
+  resources :voltage_transformers, controller: 'meters', type: 'VoltageTransformer' do
+    resources :scans
+  end
+  resources :elcounters, controller: 'meters', type: 'Elcounter' do
+    resources :scans
+  end
 
   resources :assemblies
 

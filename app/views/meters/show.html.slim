@@ -14,3 +14,20 @@ p
   strong Серийный номер:
   = @meter.serial_number
 =render @meter.class.name.underscore + '_prm_show'
+br
+h2 Сканы документов:
+-@meter.scans.each do |doc|
+  =doc.descr
+  '>
+  =doc.path
+  br
+h3 Добавить скан документа:
+=form_for([@meter, @meter.scans.build]) do |f|
+  .field
+    =f.label 'Наименование документа'
+    =f.text_field :descr
+  .field
+    =f.label 'Наименование файла'
+    =f.text_field :path
+  .actions
+    =f.submit 'Добавить'
