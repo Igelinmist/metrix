@@ -13,10 +13,4 @@ p
 p
   strong Серийный номер:
   = @meter.serial_number
--case @meter.class.name
--when 'VoltageTransformer'
-  =render 'vt_prm_show'
--when 'Elcounter'
-  =render 'elc_prm_show'
--else
-  =nil
+=render @meter.class.name.underscore + '_prm_show'
