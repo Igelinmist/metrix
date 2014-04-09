@@ -4,6 +4,8 @@ class Meter < ActiveRecord::Base
   has_many :service_jobs
   belongs_to :grsi_item
 
+  accepts_nested_attributes_for :scans
+
   delegate :permited_params, to: :class
 
   def valid_for(end_date)

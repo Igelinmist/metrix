@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140324071108) do
+ActiveRecord::Schema.define(version: 20140409042826) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20140324071108) do
 
   create_table "scans", force: true do |t|
     t.string   "descr"
-    t.string   "path"
+    t.string   "file_name"
     t.integer  "imageable_id"
     t.string   "imageable_type"
     t.datetime "created_at"

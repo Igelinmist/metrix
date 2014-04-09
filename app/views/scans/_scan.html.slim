@@ -1,0 +1,4 @@
+li
+  =link_to scan.descr,'/data/' + scan.file_name
+  '|
+  =link_to 'X', [scan.imageable,scan], method: :delete, data: { confirm: 'Уверены?' }

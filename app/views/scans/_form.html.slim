@@ -1,0 +1,9 @@
+=form_for([@documentable, @documentable.scans.build]) do |f|
+  .field
+    =f.label 'Наименование документа'
+    =f.text_field :descr
+  .field
+    =f.file_field :uploaded_file
+  br
+  .actions
+    =f.submit 'Добавить'

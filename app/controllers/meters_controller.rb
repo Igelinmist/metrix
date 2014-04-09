@@ -12,7 +12,7 @@ class MetersController < ApplicationController
   end
 
   def show
-    @meter = @meter_class.find(params[:id])
+    @documentable = @meter_class.find(params[:id])
   end
 
   def create
@@ -44,7 +44,7 @@ class MetersController < ApplicationController
   end
 
   def upload
-    uploaded_io = params[:doc_file]
+    uploaded_io = params[:uploaded_file]
     File.open(Rails.root.join('public', 'data', uploaded_io.original_filename), 'wb') do |file|
       file.write(uploaded_io.read)
     end
