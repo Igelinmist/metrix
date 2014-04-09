@@ -1,6 +1,3 @@
-=form_tag({action: :upload}, multipart: true) do
-  =file_field_tag 'doc_file'
-  =submit_tag 'upload'
 =form_for setup_ext_attr(@meter) do |f|
   .field
     = f.label 'Средство измерения:'
@@ -17,12 +14,6 @@
   .field
     =f.label 'Дата первичной поверки:'
     =f.text_field :primary_verification_date
-  -case @meter.class.name
-  -when 'VoltageTransformer'
-    =render partial: 'vt_prm_form', locals: {frm: f}
-  -when 'Elcounter'
-      =render partial: 'elc_prm_form', locals: {frm: f}
-  -else
-    =nil
+  =render partial: @meter.class.name.underscore + '_prm_form', locals: {frm: f}
   .actions = f.submit 'Сохранить'
 
