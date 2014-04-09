@@ -44,11 +44,11 @@ class MetersController < ApplicationController
   end
 
   def upload
-    uploaded_io = params[:picture]
-    File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
+    uploaded_io = params[:doc_file]
+    File.open(Rails.root.join('public', 'data', uploaded_io.original_filename), 'wb') do |file|
       file.write(uploaded_io.read)
     end
-    redirect_to controller: :meters, action: :new
+    redirect_to @meter
   end
 
 private
