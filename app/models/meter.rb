@@ -1,6 +1,10 @@
 class Meter < ActiveRecord::Base
   has_many :parts, :class_name => 'Meter', :foreign_key => :main_device_id
   belongs_to :main_device, :class_name => 'Meter'
+
+  has_and_belongs_to_many :assembly_meters, :class_name => 'Meter',
+                          :foreign_key => 'this_meter_id',
+                          :association_foreign_key => 'other_meter_id'
   
   belongs_to :assembly
   has_many :scans, as: :imageable
