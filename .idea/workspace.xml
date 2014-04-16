@@ -437,7 +437,11 @@
       <created>1397630600560</created>
       <updated>1397630600560</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Adding Ascue and AscueAttr models">
+      <created>1397638394337</created>
+      <updated>1397638394337</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
