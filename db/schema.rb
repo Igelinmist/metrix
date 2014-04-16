@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140409042826) do
+ActiveRecord::Schema.define(version: 20140416021235) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "ascue_attrs", force: true do |t|
+    t.integer  "channel_count"
+    t.date     "date_of_revision"
+    t.integer  "revision_interval"
+    t.integer  "ascue_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "ascue_attrs", ["ascue_id"], name: "index_ascue_attrs_on_ascue_id", using: :btree
 
   create_table "assemblies", force: true do |t|
     t.integer "plant_id"
@@ -50,6 +61,9 @@ ActiveRecord::Schema.define(version: 20140409042826) do
     t.date    "primary_verification_date"
     t.integer "assembly_id"
     t.integer "grsi_item_id"
+    t.integer "main_device_id"
+    t.string  "name"
+    t.boolean "is_commerce",               default: false
   end
 
   create_table "scans", force: true do |t|
@@ -59,6 +73,7 @@ ActiveRecord::Schema.define(version: 20140409042826) do
     t.string   "imageable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "valid_doc",      default: true
   end
 
   create_table "service_jobs", force: true do |t|

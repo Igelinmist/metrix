@@ -2,9 +2,7 @@ class MetersController < ApplicationController
   before_filter :setup_class
   before_filter :set_meter_item, only: [:show, :edit, :update, :destroy]
   def index
-    #@meters = @meter_class.all
     @meters = Meter.all
-
   end
 
   def new

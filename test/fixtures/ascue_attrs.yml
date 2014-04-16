@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  channel_count: 1
+  date_of_refision: 2014-04-16
+  revision_interval: 1
+  ascue_id: 
+
+two:
+  channel_count: 1
+  date_of_refision: 2014-04-16
+  revision_interval: 1
+  ascue_id: 

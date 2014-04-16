@@ -1,0 +1,13 @@
+p
+  strong Количество точек измерения
+  = @meter.ascue_attr.channel_count
+p
+  strong Дата проверки с участием АТС:
+  = @meter.ascue_attr.date_of_revision
+p
+  strong Интервал между проверками:
+  = @meter.ascue_attr.revision_interval
+
+= link_to 'Править',edit_ascue_path(@meter)
+'|
+= link_to 'Назад', meters_path

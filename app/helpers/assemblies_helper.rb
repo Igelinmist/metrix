@@ -6,7 +6,7 @@ module AssembliesHelper
     assembly_list = [] << [te,level]
 
     assembly_hash=Hash.new
-    assemblies = Assembly.order(:name).all
+    assemblies = Assembly.order(:name).load
     assemblies.each do |assembly|
       unless assembly_hash[assembly.plant_id].is_a? Array
         assembly_hash[assembly.plant_id]=[]

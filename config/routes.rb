@@ -17,6 +17,9 @@ Metrix::Application.routes.draw do
   resources :elcounters, controller: 'meters', type: 'Elcounter' do
     resources :scans
   end
+  resources :ascues, controller: 'meters', type: 'Ascue' do
+    resources :scans
+  end
 
   resources :assemblies
 

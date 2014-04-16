@@ -1,10 +1,17 @@
 =form_for setup_ext_attr(@meter) do |f|
   .field
+    = f.label 'Наименование'
+    = f.text_field :name
+  .field
     = f.label 'Средство измерения:'
     = f.select :grsi_item_id, GrsiItem.all.collect {|gi| [gi.reestr_name+"\u00B7"+gi.reestr_nmbr+"\u00B7"+gi.reestr_type, gi.id]},{ include_blank: true }
   .field
-    = f.label 'Принадлежность узлу:'
+    = f.label 'Объект измерения:'
     = f.select :assembly_id, unit_tree.map{|a| [("\u00B7"*a[1] + ' ' + a[0].name),a[0].id]}
+  .field
+    = f.label 'Входит в средство измерения:'
+    = f.select :main_device_id, measurement_units_tree.map{|a| [("\u00B7"*a[1] + ' ' + a[0].name),a[0].id]}
+
   .field
     =f.label 'Класс точности:'
     =f.text_field :accuracy_class
