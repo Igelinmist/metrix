@@ -67,8 +67,8 @@ ActiveRecord::Schema.define(version: 20140416091535) do
   end
 
   create_table "meters_meters", id: false, force: true do |t|
-    t.integer "this_meter_id"
-    t.integer "other_meter_id"
+    t.integer "acceptor_id"
+    t.integer "donor_id"
   end
 
   create_table "scans", force: true do |t|
