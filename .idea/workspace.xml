@@ -2,16 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc23ac9b-370e-4135-97c1-521438447682" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20140423053538_remove_main_device_id_from_meters.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/meters/_ascue_prm_form.html.slim" afterPath="$PROJECT_DIR$/app/views/meters/_ascue_prm_form.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/meters/_elcounter_prm_form.html.slim" afterPath="$PROJECT_DIR$/app/views/meters/_elcounter_prm_form.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/meters/_form.html.slim" afterPath="$PROJECT_DIR$/app/views/meters/_form.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/meters/_voltage_transformer_prm_form.html.slim" afterPath="$PROJECT_DIR$/app/views/meters/_voltage_transformer_prm_form.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/meters/index.html.slim" afterPath="$PROJECT_DIR$/app/views/meters/index.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/meter.rb" afterPath="$PROJECT_DIR$/app/models/meter.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/meters.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/meters.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/meters_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/meters_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="metrix.iws" />
@@ -549,7 +539,11 @@
       <created>1397661033294</created>
       <updated>1397661033294</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Changing self associations HBTM for Meters">
+      <created>1398231536777</created>
+      <updated>1398231536777</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -580,7 +574,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21733822" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296837" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33819953" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3248175" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288835" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -615,7 +609,8 @@
     <MESSAGE value="Before merge with remote" />
     <MESSAGE value="First step about scans control" />
     <MESSAGE value="Adding Ascue and AscueAttr models" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Ascue and AscueAttr models" />
+    <MESSAGE value="Changing self associations HBTM for Meters" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changing self associations HBTM for Meters" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
