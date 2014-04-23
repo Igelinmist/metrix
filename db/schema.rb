@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140416091535) do
+ActiveRecord::Schema.define(version: 20140423053538) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,7 +61,6 @@ ActiveRecord::Schema.define(version: 20140416091535) do
     t.date    "primary_verification_date"
     t.integer "assembly_id"
     t.integer "grsi_item_id"
-    t.integer "main_device_id"
     t.string  "name"
     t.boolean "is_commerce",               default: false
   end

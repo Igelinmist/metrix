@@ -1,28 +1,44 @@
-h1 Перечень средств измерений
-=@prm
-table
-  tr
-    th Технологический узел
-    th Госреестр
-    th Класс точности
-    th Заводской номер
-    th Первичная поверка
-    th
-  - @meters.each  do |meter|
-    tr
-      td =meter.assembly.full_name if meter.assembly
-      td =(meter.grsi_item.reestr_name+"\u00B7"+meter.grsi_item.reestr_nmbr+"\u00B7"+meter.grsi_item.reestr_type) if meter.grsi_item
-      td =meter.accuracy_class
-      td =meter.serial_number
-      td =meter.primary_verification_date
-      td
-        =link_to 'Смотреть',meter
-        '|
-        =link_to 'Править',id: meter.id,controller: :meters, action: :edit, type: meter.type
-        '|
-        =link_to 'Удалить', meter, data: {:confirm => 'Are you sure?'}, :method => :delete
+/h1 Перечень средств измерений
+/=@prm
+/table
+/  tr
+/    th Наименование
+/    th Технологический узел
+/    /th Госреестр
+/    th Класс точности
+/    th Заводской номер
+/    th Первичная поверка
+/    th
+/  - @meters.each  do |meter|
+/    tr
+/      td =meter.name
+/      td =meter.assembly.full_name if meter.assembly
+/      /td =(meter.grsi_item.reestr_name+"\u00B7"+meter.grsi_item.reestr_nmbr+"\u00B7"+meter.grsi_item.reestr_type) if meter.grsi_item
+/      td =meter.accuracy_class
+/      td =meter.serial_number
+/      td =meter.primary_verification_date
+/      td
+/        =link_to 'Смотреть',meter
+/        '|
+/        =link_to 'Править',id: meter.id,controller: :meters, action: :edit, type: meter.type
+/        '|
+/        =link_to 'Удалить', meter, data: {:confirm => 'Are you sure?'}, :method => :delete
+/
+/br
 
+
+
+h1 Перечень средств измерения
 br
-
 =render 'meter_types_form'
+br
+- measurement_units_tree.each do |el|
+  - if el[0].name != '-'
+    .tree
+      div class=cycle('list_line_even','list_line_odd') style="margin-left: #{(el[1]*25).to_s}px;"
+        = el[0].name
+        = link_to image_tag("okular.png",:size => "16x16", :alt => "Смотреть",:title => "Смотреть"),el[0]
+        = link_to image_tag("edit_wb.png",:size => "16x16", :alt => "Править", :title => "Править"),id: el[0].id,controller: :meters, action: :edit, type: el[0].type
+        = link_to image_tag("delete_wb.png",:size => "16x16", :alt => "Удалить", :title =>"Удалить"), el[0], data: {:confirm => 'Are you sure?'}, :method => :delete
 
+  br

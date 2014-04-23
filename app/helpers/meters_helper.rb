@@ -13,19 +13,25 @@ module MetersHelper
     device
   end
 
-  def measurement_units_tree(root_meter_id = nil)
+  def measurement_units_tree(root_meter_id = 0)
     level = 0
     mu = Meter.new
     mu.name = '-'
     meter_list = [] << [mu,level]
 
     meter_hash=Hash.new
-    meters = Meter.order(:name).load
+    meters = Meter.order(:name).load.includes(:supermeters)
     meters.each do |meter|
-      unless meter_hash[meter.main_device_id].is_a? Array
-        meter_hash[meter.main_device_id]=[]
+      if meter.supermeters.empty?
+        meter_hash[0]=[] unless meter_hash[0].is_a? Array
+        meter_hash[0] << meter
+      else
+        meter.supermeters.each do |sm|
+          meter_hash[sm.id]=[] unless meter_hash[sm.id].is_a? Array
+          meter_hash[sm.id] << meter
+        end
       end
-      meter_hash[meter.main_device_id] << meter
+
     end
 
     build_tree_for=Proc.new do |root_id|

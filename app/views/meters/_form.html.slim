@@ -1,6 +1,6 @@
 =form_for setup_ext_attr(@meter) do |f|
   .field
-    = f.label 'Наименование'
+    = f.label 'Наименование:'
     = f.text_field :name
   .field
     = f.label 'Средство измерения:'
@@ -23,4 +23,6 @@
     =f.text_field :primary_verification_date
   =render partial: @meter.class.name.underscore + '_prm_form', locals: {frm: f}
   .actions = f.submit 'Сохранить'
+
+/p = measurement_units_tree
 
